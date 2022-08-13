@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="立方创想"/>
+    <meta name="Keywords" content="应用"/>
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+    <!-- <link rel="icon" href="./fi.png"> -->
+    <title></title>
+
+    <script src="js/vue.global.js"></script>
+    <!--    <script src="js/vue.global.prod.js"></script>-->
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<noscript>
+    <strong>We're sorry but elevato-html doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app" style="height: 100%">
+        <div  class="container-fluid" style="height: 453px ;background: linear-gradient(238deg, #1DE7ED 0%, #4D63FC 100%);;">
+            <div class="row h-100 mb-5"  style="padding-top: 50px; padding-bottom: 50px" >
+                <div class="col-1">
+                </div>
+                <div class="col-5 ">
+                    <div>
+                        <span class="text_1">{{name}}</span>
+                    </div>
+                    <div>
+                        <span class="paragraph_1">{{description}}</span>
+                    </div>
+                    <div class="text-wrapper_1 flex-row justify-between row">
+                        <div class="col-6">
+                            <div>
+                                <span class="text_2">下载方式一</span>
+                            </div>
+                            <div class="text-wrapper_2 flex-col">
+                                <span class="text_4" style="display:block;  position:relative;top:50%;transform:translateY(-50%); padding-left: 23px">点击下载</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <span class="text_3">下载方式二</span>
+                            </div>
+                            <div>
+                                <div class="group_2 flex-col"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-5 align-self-center">
+                    <img :src="img" class="w-75 ">
+                </div>
+                <div class="col-1">
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid w-100">
+        <div  class="row w-100"  >
+            <div class="col-1"> </div>
+            <div class="col-10 " style=" margin: -87px 0 0 0; background-color: rgba(248, 249, 250, 1)">
+                <div class="row w-100">
+                    <div class="col-6">
+                        <img
+                               style="width: 100%;"
+                                referrerpolicy="no-referrer"
+                                src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8848e1657a688aaaf7131bb350cc38aab78266addedfa1e78718df5da3c79fdd"
+                        />
+                    </div>
+                    <div class="col-6">
+                        <div class="text-wrapper_3 flex-col justify-between">
+                            <span class="text_5">哪里撤回点哪里</span>
+                            <span class="text_6">不会错过好友撤回的消息了呢</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100">
+                    <div class="col-6">
+                        <img
+                                style="width: 100%;"
+                                referrerpolicy="no-referrer"
+                                src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8848e1657a688aaaf7131bb350cc38aab78266addedfa1e78718df5da3c79fdd"
+                        />
+                    </div>
+                    <div class="col-6">
+                        <div class="text-wrapper_3 flex-col justify-between">
+                            <span class="text_5">哪里撤回点哪里</span>
+                            <span class="text_6">不会错过好友撤回的消息了呢</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"> </div>
+        </div>
+    </div>
+</div>
+
+<!-- built files will be auto injected -->
+<script type="text/javascript">
+
+    const RootComponent = {
+        /* 选项 */
+        data() {
+            return {
+                id:1,
+                img:'img/app.png',
+                name:'消息防撤回',
+                description:'防撤回神器 -- Android 免root 查看撤回消息和闪照 !防撤回神器 -- Android 免root 查看撤回消息\n' +
+                    '和闪照 !防撤回神器 -- Android 免root 查看撤回消息和闪照 !'
+            }
+        }
+    }
+    const app = Vue.createApp(RootComponent)
+    const vm = app.mount('#app')
+
+</script>
+</body>
+
+<style>
+    .text_1 {
+        width: 150px;
+        height: 42px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 30px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 42px;
+    }
+
+    .paragraph_1 {
+        width: 604px;
+        height: 50px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 25px;
+        margin-top: 30px;
+    }
+
+
+
+
+    .text-wrapper_1 {
+        width: 315px;
+        height: 25px;
+        margin-top: 28px;
+    }
+
+    .text_2 {
+        width: 80px;
+        height: 25px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+    }
+
+    .text_3 {
+        width: 80px;
+        height: 25px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+    }
+
+    .group_1 {
+        width: 327px;
+        height: 86px;
+        margin: 15px 0 0 3px;
+    }
+
+    .text-wrapper_2 {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 2px;
+        height: 48px;
+        margin-top: 19px;
+        width: 126px;
+    }
+
+    .text_4 {
+        width: 64px;
+        height: 25px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 16px;
+        font-family: PingFangSC-Medium;
+        white-space: nowrap;
+        line-height: 25px;
+        text-align:center;
+    }
+
+    .group_2 {
+        width: 94px;
+        height: 92px;
+        border: 3px solid rgba(255, 255, 255, 1);
+        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngdad9c22658aad2690d62c927b834e1cc200cc8e0f7ae10da411f6d7ad0680cdc) -3px -3px
+        no-repeat;
+        background-size: 94px 92px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .group_3 {
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 30px;
+        width: 1200px;
+        height: 1726px;
+        margin: -107px 0 0 360px;
+    }
+
+    .box_1 {
+        width: 905px;
+        height: 413px;
+        margin: 37px 0 0 73px;
+    }
+
+    .image_1 {
+        width: 480px;
+        height: 413px;
+    }
+
+    .text-wrapper_3 {
+        width: 340px;
+        height: 107px;
+        margin-top: 153px;
+    }
+
+    .text_5 {
+        width: 224px;
+        height: 45px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 32px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45px;
+    }
+
+    .text_6 {
+        width: 340px;
+        height: 25px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin-top: 37px;
+    }
+
+    .box_2 {
+        background-color: rgba(248, 249, 250, 1);
+        width: 1200px;
+        height: 525px;
+        margin-top: 51px;
+    }
+
+    .text-wrapper_4 {
+        width: 253px;
+        height: 107px;
+        margin: 210px 0 0 143px;
+    }
+
+    .text_7 {
+        width: 224px;
+        height: 45px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 32px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45px;
+    }
+
+    .text_8 {
+        width: 253px;
+        height: 25px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin-top: 37px;
+    }
+
+    .image_2 {
+        width: 426px;
+        height: 378px;
+        margin: 74px 83px 0 295px;
+    }
+
+    .text_9 {
+        width: 128px;
+        height: 45px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 32px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45px;
+        margin: 83px 0 0 143px;
+    }
+
+    .text_10 {
+        width: 260px;
+        height: 25px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin: 48px 0 0 143px;
+    }
+
+    .paragraph_2 {
+        width: 449px;
+        height: 74px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 37px;
+        margin: 24px 0 0 159px;
+    }
+
+    .text_11 {
+        width: 264px;
+        height: 25px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin: 37px 0 0 143px;
+    }
+
+    .paragraph_3 {
+        width: 449px;
+        height: 74px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 37px;
+        margin: 24px 0 0 159px;
+    }
+
+    .text_12 {
+        width: 264px;
+        height: 25px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin: 37px 0 0 143px;
+    }
+
+    .paragraph_4 {
+        width: 449px;
+        height: 74px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 37px;
+        margin: 24px 0 81px 159px;
+    }
+
+
+</style>
+
+</html>

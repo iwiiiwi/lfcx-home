@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="立方创想"/>
+    <meta name="Keywords" content="应用"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <link rel="icon" href="./fi.png"> -->
+    <title>立方创想</title>
+
+    <script src="js/vue.global.js"></script>
+    <!--    <script src="js/vue.global.prod.js"></script>-->
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<noscript>
+    <strong>We're sorry but elevato-html doesn't work properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+</noscript>
+<div id="app">
+        <div >
+            <div class="position-fixed end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="1000">
+                    <div class="toast-body">
+                        敬请期待.
+                    </div>
+                </div>
+            </div>
+            <div  class=" w-100" style=" background: url('img/head.png') no-repeat center  ;   background-size:cover; ">
+                <div class="row  no_margin ">
+
+                    <div class="col-2 offset-md-2  offset-1 mt-3 ">
+                        <img src="img/head-icon.png"  style="width: 4rem">
+                    </div>
+                    <div class="col-5  offset-2 mt-3 ">
+                        <div class="row ">
+                            <div class="col-2  offset-3 invisible">
+                                <div class="vstack  col-md-5 mx-auto">
+                                    <span class="text_1" style="cursor:pointer;align-content: center;width: 27px">产品</span>
+                                    <div class="  box_1 flex-col"></div>
+                                </div>
+                            </div>
+                            <div class="col-2 offset-md-0 offset-3 invisible ">
+                                <span class="text_2" style="cursor:pointer;">联系我们</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row  no_margin   mt-3"  >
+                    <div class="col-6 offset-md-2 offset-1  ">
+                        <span class="text_4">工具类软件解决方案</span>
+                    </div>
+                </div>
+                <div class="row no_margin">
+                    <div class="col-8 offset-md-2 offset-1 pb-3">
+                        <span class="paragraph_1  ">
+                            只做实用好用的工具类软件,提升您的工作效率</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 mb-5">
+                <div v-for="app in apps" class="row no_margin pt-5">
+                    <div class="col-4 col-md-3 offset-1   align-self-center justify-content-center">
+                        <img :src="app.img" class="w-100 ">
+                    </div>
+                    <div class="col-6  offset-0 offset-md-1 align-self-center ">
+                        <div class="row">
+                            <div class="col-4  ">
+                                <span class="text_11">{{app.name}}</span>
+                            </div>
+                            <div class="col-4  offset-3 offset-md-4 justify-content-end">
+                            <span class="text_12" style="cursor:pointer;"
+                                  @click="toAppInfo(app.id)">了解详情&nbsp;&gt;&gt;</span>
+                            </div>
+                        </div>
+                        <div class="row  ">
+                        <span class="paragraph_4 col-8">{{app.description}}</span>
+                        </div>
+                        <div class="row m-2">
+                            <div class="text-wrapper_5  flex-col align-content-center " style="cursor:pointer;">
+                                <span class="text_10  middle" @click="toAppInfo(app.id)" >立即下载</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div  >
+                <div class="row no_margin" style=" height: 116px; background: #000000;">
+                    <div class="row   h-100  ">
+                        <div class="col-2   "></div>
+                        <div class="col-2    align-self-center">
+                            <img src="img/bottom-icon.png" class="w-75 ">
+                        </div>
+                        <div class="col-2  "></div>
+
+                        <div class="col-6    align-self-center">
+                            <div class="text-group_1   justify-between">
+                                <span class="text_15">罗先生</span><br/>
+                                <span class="paragraph_5"
+                                >电话：18123738563<br/>邮箱：cubecreation&#64;163.com</span
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</div>
+<!-- built files will be auto injected -->
+<script type="text/javascript">
+    let apps = [
+        {
+            id: 2,
+            img: 'img/huaban.jpg',
+            name: '画板工具',
+            description: '画板工具 -- 支持手绘笔/增加多个画板/保存画板文件/增加多个画板等个性化功能\n' +
+                '应用与android手机/平板/装有android系统的电视设备，为教育讲课贡献一份力量'
+        }
+        ,
+        {
+            id: 1,
+            img: 'img/app.png',
+            name: '手机定位助手',
+            description: '手机定位助手 -- 可以通过软件实时了解孩子的实时定位信息，为家人的安全保驾护航\n'
+        }
+
+    ]
+    const RootComponent = {
+        /* 选项 */
+        data() {
+            return {
+                apps: apps
+            }
+        },
+        methods: {
+            toAppInfo: function (id) {
+                // console.log('id:', id)
+                // window.location.href = "appInfo.html?id=" + id
+                this.showToast()
+            },
+            showToast:function (){
+                var toastLiveExample = document.getElementById('liveToast')
+                var toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+
+            }
+        }
+    }
+    const app = Vue.createApp(RootComponent)
+    const vm = app.mount('#app')
+
+</script>
+</body>
+
+<style>
+
+
+
+
+
+       .no_margin {
+           margin-right: 0px !important;
+           margin-left: 0px !important;
+       }
+
+    .text_1 {
+        color: rgba(111, 232, 236, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Medium;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 22px;
+    }
+
+    .box_1 {
+        background-color: rgba(111, 232, 236, 1);
+        border-radius: 2px;
+        width: 27px;
+        height: 3px;
+        margin: 7px 0 0 0px;
+    }
+
+    .text_2 {
+        width: 64px;
+        height: 22px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Regular;
+        text-align: right;
+        white-space: nowrap;
+        line-height: 22px;
+        /*margin: 10px 0 0 60px;*/
+    }
+
+
+
+    .text_4 {
+        width: 460px;
+        height: 65px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 26px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 65px;
+    }
+
+
+    .paragraph_1 {
+        color: rgba(255, 255, 255, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+    }
+
+
+    .text_15 {
+        width: 54px;
+        height: 28px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 28px;
+    }
+
+    .paragraph_5 {
+        width: 150px;
+        height: 42px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 21px;
+        margin-top: 14px;
+    }
+
+
+    .text-wrapper_5 {
+        height: 28px;
+        background: url(img/bt-bg.png) center no-repeat ;
+        background-size: contain;
+        width: 86px;
+    }
+
+    .text_10 {
+        width: 64px;
+        height: 25px;
+        color: rgba(255, 255, 255, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Medium;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 25px;
+    }
+
+
+
+
+    .text_11 {
+        width: 120px;
+        height: 17px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 17px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 22px;
+    }
+
+    .text_12 {
+        width: 89px;
+        height: 25px;
+        color: rgba(79, 212, 211, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Medium;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 25px;
+        margin-top: 9px;
+    }
+
+    .paragraph_4 {
+        width: 700px;
+        color: rgba(102, 102, 102, 1);
+        font-size: 9px;
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        line-height: 25px;
+        margin-top: 30px;
+    }
+
+    .middle {
+
+        float: none;
+
+        display: inline-block;
+
+        vertical-align: middle;
+
+    }
+
+</style>
+
+</html>
